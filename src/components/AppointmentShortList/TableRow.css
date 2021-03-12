@@ -1,0 +1,18 @@
+.action_status{
+    padding:5px 10px;
+    cursor: pointer;
+    color: black;
+    border-color: transparent;
+}
+.status1{
+    background-color: black;
+    color: white;
+}
+.status2{
+    background-color: red;
+    color: white;
+}
+.status3{
+    background-color: green;
+    color: white;
+}

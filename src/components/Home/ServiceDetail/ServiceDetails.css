@@ -1,0 +1,24 @@
+.single-item{
+    transition:  0.2s;
+    will-change: transform;
+    cursor: pointer;
+  }
+  .single-item:hover{
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+      border-radius: 20px 0 20px 0;
+      background-image: linear-gradient(90deg ,#1CD9B6 0% ,#224FC9 );
+      color: white;
+     
+  }
+  #p {
+     color: gray;
+  }
+  #p:hover{
+      color: white;
+  }
+   .service-card{
+    border:none
+  } 
+  
+  
+    
