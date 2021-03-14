@@ -4,15 +4,16 @@ import {
   Switch,
   Route,
 
- 
+
 } from "react-router-dom";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import './App.css';
 import Appointment from "./components/Appointment/Appointment/Appointment";
 import Home from "./components/Home/Home/Home";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 import Login from './components/Login/Login';
 import Dashboard from "./components/DashboardPage/Dashboard/Dashboard";
-import AllPatients from './components/AllPatients/AllPatients' 
+import AllPatients from './components/AllPatients/AllPatients'
 import AddDoctor from './components/AddDoctor/AddDoctor';
 import Dboard from './components/Dboard/Dboard';
 import MainDashboard from "./components/MainDashboard/MainDashboard";
@@ -21,6 +22,7 @@ import Testimonial from './components/Testimonials/Testimonials';
 import About from './components/Home/Services/Services';
 import Blog from './components/Home/Blog/Blog';
 import Contact from './components/Home/Contact/Contact';
+import Doctor from './components/Home/Doctors/Doctors';
 
 export const UserContext = createContext();
 export const AppointmentContext = createContext();
@@ -33,62 +35,67 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'>
-             <Home></Home>
+            <Home></Home>
           </Route>
           {/* <PrivateRoute path="/appointment">
           <Appointment/>
           </PrivateRoute> */}
-           <Route path="/appointment">
-          <Appointment/>
+          <Route path="/appointment">
+            <Appointment />
           </Route>
 
           <Route path="/prescription">
-          < PrescriptionTable/>
+            < PrescriptionTable />
           </Route>
 
           <Route path="/testimonial">
-          < Testimonial/>
+            < Testimonial />
           </Route>
 
           <Route path="/about">
-          < About/>
+            < About />
           </Route>
-           
+
+          <Route path="/doctor">
+            < Doctor />
+          </Route>
+
           <Route path="/contact">
-          < Contact/>
+            < Contact />
           </Route>
 
           <Route path="/blog">
-          < Blog/>
+            < Blog />
           </Route>
 
           <Route path="/allPatients">
-          <AllPatients/>
+            <AllPatients />
           </Route>
 
           <Route path="/addDoctor">
-          <AddDoctor/>
+            <AddDoctor />
           </Route>
 
           <Route path="/dboard">
-          <Dboard/>
+            <Dboard />
           </Route>
 
           {/* <Route path="/appointmentList">
           <AppointmentList/>
           </Route> */}
           <Route path="/appointmentList">
-          <Dashboard/>
+            <Dashboard />
           </Route>
-          <PrivateRoute path="/dashboard">
-          <MainDashboard/>
-          </PrivateRoute>
+          <Route path="/dashboard">
+            <MainDashboard />
+          </Route>
           <Route path='/login'>
-            <Login/>
+            <Login />
           </Route>
         </Switch>
       </Router>
-      </UserContext.Provider>
+      <MessengerCustomerChat pageId="106631868170344" appId="3860328510677348" />
+    </UserContext.Provider>
   );
 }
 

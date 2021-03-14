@@ -28,7 +28,7 @@ const Navbar = () => {
         <a className="nav-link mr-5" style={{color:'#45EF75',fontWeight:'bold'}} href="/dashboard">Dashboard</a>
       </li>
       <li className="nav-item">
-        <a className={`nav-link mr-5 ${window.location.pathname === '/appointment' ? 'text-secondary' : 'text-white'} text-white`}  href="/testimonial">Reviews</a>
+        <a className={`nav-link mr-5 ${window.location.pathname === '/appointment' ? 'text-secondary' : 'text-white'} text-white`}  href="/doctor">Doctors</a>
       </li>
       <li className="nav-item">
         <a className={`nav-link mr-5 ${window.location.pathname === '/appointment' ? 'text-secondary' : 'text-white'} text-white`} href="/blog">Blog</a>
